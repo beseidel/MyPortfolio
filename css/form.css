@@ -1,0 +1,156 @@
+/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400, 500);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* background-image: url('https://i.imgur.com/PIJWrEi.jpg'); */
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 375px;
+  width: 500px;
+  background-color: #3f52b8;
+  background-image: url('images/background30.png');
+
+  padding: 0 90px 0 90px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.form__title {
+  font-weight: normal;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 35px 0 20px 0;
+}
+.form__group {
+  height: 80px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.form__label {
+  position: absolute;
+  bottom: 62px;
+  color: #adb5e3;
+  font-size: 12px;
+  margin-left: 3px;
+  transition: all 0.5s;
+  cursor: auto;
+}
+.form__label.is-closed {
+  color: #fff;
+  font-size: 16px;
+  bottom: 15px;
+  cursor: pointer;
+}
+.form__input {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 57px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding-left: 60px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #606060;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  transition: height 0.5s;
+}
+.form__input--email {
+  background-image: url('http://image.noelshack.com/fichiers/2015/33/1439666989-mail.png');
+}
+.form__input--password {
+  background-image: url('http://image.noelshack.com/fichiers/2015/33/1439666989-password.png');
+}
+.form__input.is-closed {
+  height: 3px;
+  background-image: none;
+}
+.form__link {
+  display: block;
+  float: right;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #25306c;
+  transition: all 0.5s;
+}
+.form__link:hover {
+  color: #adb5e3;
+}
+.form__submit {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  background-color: #324192;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 2;
+  transition: height 0.25s;
+}
+.form__submit--animated {
+  height: 100%;
+  text-indent: 102%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.form__submit--animated:after {
+  content: '✓';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 0px;
+  text-indent: 0;
+  opacity: 0;
+  animation: show 1s forwards;
+}
+
+.reset {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  z-index: 1;
+  bottom: -40px;
+  width: 100px;
+  margin: 0 110px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #1e2859;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+  transition: transform 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.reset--hide {
+  transform: translateY(-50px);
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    font-size: 50px;
+  }
+}

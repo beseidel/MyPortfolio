@@ -1,0 +1,414 @@
+/* .nav {
+  font-family: canarobook, arial, helvetica;
+  letter-spacing: 10px;
+  color: white;
+  text-align: center;
+  height: 135px;
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+  margin-bottom: 30px;
+} */
+.nav {
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+.box {
+  font-family: canarobook, arial, helvetica;
+  letter-spacing: 10px;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+  position: relative;
+  height: 100px;
+  width: 100%;
+}
+.da_thumbs_container {
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  /* position: center; */
+}
+
+/* The image used */
+.bg {
+  /* background-image: url('images/background32.jpg'); */
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* background-image:  */
+}
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 0px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+}
+
+.da-thumbs {
+  list-style: none;
+  width: 970px;
+  height: 900px;
+  position: relative;
+  vertical-align: top;
+  /* position: absolute; */
+  /* top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* height: 3000px;
+  width: 700px; */
+  margin: 40px auto;
+  padding: 10px;
+}
+.da-thumbs li {
+  float: left;
+  margin: 5px;
+  background: black;
+  padding: 8px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.da-thumbs li a,
+.da-thumbs li a img {
+  display: block;
+  position: relative;
+}
+.da-thumbs li a {
+  overflow: hidden;
+}
+.da-thumbs li a div {
+  position: absolute;
+  background: #333;
+  background: rgba(75, 75, 75, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.da-thumbs li a div.custom-hover-object {
+  position: absolute;
+  background: #333;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.da-thumbs li a div span {
+  display: block;
+  padding: 10px 0;
+  margin: 40px 20px 20px 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
+}
+.da-thumbs li a div.custom-hover-object span {
+  color: rgba(75, 75, 75, 0.9);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 255.1), 0 -10px 0 rgba(0, 0, 0, 0.3);
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  position: relative;
+  vertical-align: top;
+}
+
+canvas {
+  width: 220px;
+  height: 220px;
+}
+
+.drop {
+  position: absolute;
+  height: 0em;
+  width: 0em;
+  border: 2px solid black;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+#app {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+#title {
+  top: 50%;
+  right: 50%;
+}
+
+/* social button css below */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 24px;
+  background: #262626;
+}
+
+.container_social {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30%;
+  left: 50%;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.social {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0 1rem;
+  height: 5rem;
+  width: 5rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  outline: 0;
+}
+.social__button:hover span:nth-child(1) {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.social__button:hover span:nth-child(3) {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.social__button:hover span:nth-child(2) {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.social__button:hover span:nth-child(4) {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.social__button span {
+  background: #ffffff;
+  position: absolute;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+.social__button span:nth-child(1),
+.social__button span:nth-child(3) {
+  width: 100%;
+  height: 2px;
+}
+.social__button span:nth-child(1) {
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+.social__button span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+.social__button span:nth-child(2),
+.social__button span:nth-child(4) {
+  height: 100%;
+  width: 2px;
+}
+.social__button span:nth-child(2) {
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+  transform-origin: bottom;
+}
+.social__button span:nth-child(4) {
+  top: 0;
+  right: 0;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: top;
+  transform-origin: top;
+}
+
+/* spacelandbelow */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+}
+a:hover {
+  opacity: 0.5;
+}
+
+body {
+  background-color: rgb(32, 33, 36);
+}
+
+header {
+  top: 0;
+  width: 100%;
+  height: 72px;
+  position: fixed;
+  background-color: rgb(32, 33, 36);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header nav {
+  display: block;
+  margin-left: auto;
+}
+
+.myproject {
+  height: 100%;
+  text-align: center;
+  line-height: 72px;
+  padding-left: 10px;
+}
+.footbox {
+  height: 420px;
+  text-align: center;
+  line-height: 50px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-top: 100px;
+  /* padding-left: 10px; */
+}
+.footer {
+  display: inline-block;
+  /* position: relative; */
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  vertical-align: top;
+}
+
+header li {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  line-height: 72px;
+  padding: 0 16px;
+  font-size: 18px;
+}
+
+header ul {
+  height: 100%;
+}
+
+#projet {
+  font-weight: 100;
+}
+
+main {
+  display: block;
+}
+main {
+  margin-top: 100px;
+  display: block;
+}
+main section {
+  width: 50%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-color: white;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: 1px;
+  padding: 20px;
+}
+
+main section img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+main h2 {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+}
+
+main span {
+  font-weight: 400;
+}
+
+#login {
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  display: none;
+}
